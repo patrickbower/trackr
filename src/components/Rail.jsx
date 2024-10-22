@@ -17,7 +17,7 @@ function Rail({ data, halfScreenWidth }) {
 
   return (
     <div
-      className="h-screen flex justify-center flex-col gap-1 overflow-x-auto scrollbar-hide"
+      className="h-screen flex justify-center flex-col gap-1 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
       style={{
         paddingLeft: `${startPosition}px`,
       }}

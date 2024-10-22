@@ -1,6 +1,6 @@
 function Rail({ value }) {
   return (
-    <div className="bg-zinc-600 bg-opacity-50 backdrop-blur-md px-10 py-8 flex-none w-[500px]">
+    <div className="bg-zinc-600 bg-opacity-50 backdrop-blur-md px-10 py-8 flex-none w-[500px] snap-center">
       <div className="flex justify-between gap-9 items-center bg-opacity-100 text-white">
         <span className="text-4xl font-bold w-16 flex-shrink-0 text-center">
           {value.in}
