@@ -11,11 +11,13 @@ function Rail({ data, halfScreenWidth }) {
       deckB[key] = data[key];
     }
   });
+
   const startPosition = halfScreenWidth - 250;
+  const endPosition = halfScreenWidth - 466;
 
   return (
     <div
-      className="h-screen flex justify-center flex-col gap-2 overflow-x-auto scrollbar-hide"
+      className="h-screen flex justify-center flex-col gap-1 overflow-x-auto scrollbar-hide"
       style={{
         paddingLeft: `${startPosition}px`,
       }}
@@ -29,6 +31,14 @@ function Rail({ data, halfScreenWidth }) {
         {Object.entries(deckB).map(([key, value]) => (
           <Track key={key} value={value} />
         ))}
+        <div
+          className="flex-none"
+          style={{
+            width: `${endPosition}px`,
+          }}
+        >
+          &nbsp;
+        </div>
       </div>
     </div>
   );
