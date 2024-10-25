@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Rail from "./components/Rail";
+import Info from "./components/Info";
 
 function App() {
   const [data, setData] = useState(null);
@@ -44,6 +45,7 @@ function App() {
       <div className="fixed inset-y-0 left-[calc(50%+100px)] w-px bg-white"></div>
       {data && <Rail data={data} halfScreenWidth={halfScreenWidth} />}
       <div className="fixed inset-y-0 left-1/2 transform -translate-x-1/2 w-px bg-red-500"></div>
+      <Info />
     </div>
   );
 }
