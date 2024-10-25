@@ -1,4 +1,5 @@
-import Track from "./Track";
+import TrackA from "./TrackA";
+import TrackB from "./TrackB";
 
 function Rail({ data, halfScreenWidth }) {
   let deckA = {};
@@ -24,12 +25,12 @@ function Rail({ data, halfScreenWidth }) {
     >
       <div className="flex flex-row gap-[214px]">
         {Object.entries(deckA).map(([key, value]) => (
-          <Track key={key} index={key} value={value} deck="A" />
+          <TrackA key={key} index={key} value={value} />
         ))}
       </div>
       <div className="flex flex-row gap-[214px] pl-[356px]">
         {Object.entries(deckB).map(([key, value]) => (
-          <Track key={key} index={key} value={value} deck="B" />
+          <TrackB key={key} index={key} value={value} />
         ))}
         <div
           className="flex-none"

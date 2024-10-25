@@ -5,13 +5,12 @@ function Rail({ value, index, deck }) {
     <div className="bg-zinc-600 bg-opacity-50 backdrop-blur-md px-10 py-8 flex-none w-[500px] snap-center rounded-lg">
       <div className="flex justify-between gap-9 items-center bg-opacity-100 text-white">
         <span className="text-4xl font-bold w-16 flex-shrink-0 text-center relative">
-          {value.in}
-          <span
-            className={`w-24 absolute left-1/2 transform -translate-x-1/2 text-xs font-light opacity-50 uppercase ${
-              deck === "B" ? "-top-5" : "-bottom-5"
-            }`}
-          >
+          <span className="w-24 absolute left-1/2 transform -translate-x-1/2 text-xs font-light text-blue-500 uppercase -top-5 blue-line">
             {value.mix_in}
+          </span>
+          {value.in}
+          <span className="w-24 absolute left-1/2 transform -translate-x-1/2 text-xs font-light opacity-20 uppercase -bottom-5">
+            IN
           </span>
         </span>
         <div className="flex-grow">
@@ -23,12 +22,11 @@ function Rail({ value, index, deck }) {
           </p>
         </div>
         <span className="text-4xl font-bold w-16 flex-shrink-0 text-center relative">
+          <span className="w-24 absolute left-1/2 transform -translate-x-1/2 text-xs font-light opacity-20 uppercase -bottom-5">
+            OUT
+          </span>
           {value.out}
-          <span
-            className={`w-24 absolute left-1/2 transform -translate-x-1/2 text-xs font-light opacity-50 uppercase ${
-              deck === "B" ? "-top-5" : "-bottom-5"
-            }`}
-          >
+          <span className="w-24 absolute left-1/2 transform -translate-x-1/2 text-xs font-light text-blue-500 uppercase -top-5 blue-line">
             {value.mix_out}
           </span>
         </span>
