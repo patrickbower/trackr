@@ -29,7 +29,9 @@ function App() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    <div className="bg-neutral-700 w-screen h-screen flex items-center justify-center">
+      return <div>Loading</div>;
+    </div>;
   }
 
   if (error) {

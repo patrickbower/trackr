@@ -24,12 +24,12 @@ function Rail({ data, halfScreenWidth }) {
     >
       <div className="flex flex-row gap-[214px]">
         {Object.entries(deckA).map(([key, value]) => (
-          <Track key={key} value={value} />
+          <Track key={key} index={key} value={value} deck="A" />
         ))}
       </div>
       <div className="flex flex-row gap-[214px] pl-[356px]">
         {Object.entries(deckB).map(([key, value]) => (
-          <Track key={key} value={value} />
+          <Track key={key} index={key} value={value} deck="B" />
         ))}
         <div
           className="flex-none"
